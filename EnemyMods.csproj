@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA7595F6-8349-4476-A1A4-519D5CDEDBD1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnemyMods</RootNamespace>
+    <AssemblyName>EnemyMods</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Desktop\New folder\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Desktop\New folder\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Terraria">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\SteamApps\common\Terraria\Terraria.exe</HintPath>
+    </Reference>
+    <Reference Include="tmodloader">
+      <HintPath>..\..\..\..\..\..\Desktop\ModLoader\tmodloader.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buffs\ArtilleryCooldown.cs" />
+    <Compile Include="Buffs\BloodArmor.cs" />
+    <Compile Include="Buffs\Bloodied.cs" />
+    <Compile Include="Buffs\BloodWell.cs" />
+    <Compile Include="Buffs\BowTurret.cs" />
+    <Compile Include="Buffs\Counter.cs" />
+    <Compile Include="Buffs\CounterCooldown.cs" />
+    <Compile Include="Buffs\CounterStanceEpee.cs" />
+    <Compile Include="Buffs\CounterStanceEpee2.cs" />
+    <Compile Include="Buffs\CounterStanceEpee3.cs" />
+    <Compile Include="Buffs\CounterStanceEstoc.cs" />
+    <Compile Include="Buffs\CounterStanceFoil.cs" />
+    <Compile Include="Buffs\CounterStanceFoil2.cs" />
+    <Compile Include="Buffs\CounterStanceFoil3.cs" />
+    <Compile Include="Buffs\CounterStanceFoil4.cs" />
+    <Compile Include="Buffs\CounterStanceRapier.cs" />
+    <Compile Include="Buffs\Dragonslay.cs" />
+    <Compile Include="Buffs\GunbladeDefense.cs" />
+    <Compile Include="Buffs\GunbladeMelee.cs" />
+    <Compile Include="Buffs\GunbladeMelee2.cs" />
+    <Compile Include="Buffs\GunbladeMelee3.cs" />
+    <Compile Include="Buffs\GunbladeRanged.cs" />
+    <Compile Include="Buffs\GunbladeRanged2.cs" />
+    <Compile Include="Buffs\GunbladeRanged3.cs" />
+    <Compile Include="Buffs\GunTurret.cs" />
+    <Compile Include="Buffs\Hemoplague.cs" />
+    <Compile Include="Buffs\Jump.cs" />
+    <Compile Include="Buffs\potions\BattleDancerDraught.cs" />
+    <Compile Include="Buffs\potions\DuelistDraught.cs" />
+    <Compile Include="Buffs\potions\EarthenDraught.cs" />
+    <Compile Include="Buffs\potions\ElixirOfFlight.cs" />
+    <Compile Include="Buffs\potions\ElixirOfReconstruction.cs" />
+    <Compile Include="Buffs\potions\ElixirOfSteel.cs" />
+    <Compile Include="Buffs\potions\MysteriousPhilter.cs" />
+    <Compile Include="Buffs\potions\ShockTonic.cs" />
+    <Compile Include="Buffs\potions\Tenacity.cs" />
+    <Compile Include="Buffs\RocketTurret.cs" />
+    <Compile Include="Buffs\ShotgunTurret.cs" />
+    <Compile Include="Buffs\Slow.cs" />
+    <Compile Include="Buffs\Stunned.cs" />
+    <Compile Include="Buffs\Suspended.cs" />
+    <Compile Include="Buffs\UnboundSoul.cs" />
+    <Compile Include="Buffs\Undying.cs" />
+    <Compile Include="Buffs\VoidBurn.cs" />
+    <Compile Include="Buffs\VoidTarget.cs" />
+    <Compile Include="Dusts\VoidDust.cs" />
+    <Compile Include="EnemyMods.cs" />
+    <Compile Include="Items\Armor.cs" />
+    <Compile Include="Items\Boss\VoidCrown.cs" />
+    <Compile Include="Items\Essences\VengefulEssence.cs" />
+    <Compile Include="Items\Essences\VoidEssence.cs" />
+    <Compile Include="Items\GItem.cs" />
+    <Compile Include="Items\Tier1\IronNeedle.cs" />
+    <Compile Include="Items\Tier2\AzureGreatarrow.cs" />
+    <Compile Include="Items\BloodMagePact.cs" />
+    <Compile Include="Items\BloodShot.cs" />
+    <Compile Include="Items\Bullet.cs" />
+    <Compile Include="Items\ChoiceToken.cs" />
+    <Compile Include="Items\CircleSlash.cs" />
+    <Compile Include="Items\Tier2\AzureGreatbow.cs" />
+    <Compile Include="Items\Tier2\AzureNeedle.cs" />
+    <Compile Include="Items\Tier3\CrystalGreatarrow.cs" />
+    <Compile Include="Items\Tier3\CursedGreatarrow.cs" />
+    <Compile Include="Items\Tier3\Greatbone.cs" />
+    <Compile Include="Items\Tier3\HellfireNeedle.cs" />
+    <Compile Include="Items\Tier4\AssassinNeedle.cs" />
+    <Compile Include="Items\Tier4\DragonslayerGreatarrow.cs" />
+    <Compile Include="Items\Tier1\MysteriousPhilter.cs" />
+    <Compile Include="Items\Tier1\Panacea.cs" />
+    <Compile Include="Items\Tier2\BlazingEstoc.cs" />
+    <Compile Include="Items\Tier2\DuelistDraught.cs" />
+    <Compile Include="Items\Tier2\TenacityTonic.cs" />
+    <Compile Include="Items\Tier3\CursedFoil.cs" />
+    <Compile Include="Items\Tier1\FencerFoil.cs" />
+    <Compile Include="Items\Tier3\BlessedRapier.cs" />
+    <Compile Include="Items\Tier3\ElixirOfReconstruction.cs" />
+    <Compile Include="Items\Tier3\ShockTonic.cs" />
+    <Compile Include="Items\Tier4\EarthenDraught.cs" />
+    <Compile Include="Items\Tier4\ElixirOfFlight.cs" />
+    <Compile Include="Items\Tier4\ElixirOfSteel.cs" />
+    <Compile Include="Items\Tier4\FrostbiteEpee.cs" />
+    <Compile Include="Items\Tier5\BattleDancerDraught.cs" />
+    <Compile Include="Items\Tier5\MartianFoil.cs" />
+    <Compile Include="Items\Tier5\TeravoltNeedle.cs" />
+    <Compile Include="Items\Tier6\LodestarNeedle.cs" />
+    <Compile Include="Items\Tier6\NebulaEstoc.cs" />
+    <Compile Include="Items\Tier4\ShadowflameEstoc.cs" />
+    <Compile Include="Items\Tier1\SimpleRapier.cs" />
+    <Compile Include="Items\Tier5\AncientRapier.cs" />
+    <Compile Include="Items\Tier6\Orion.cs" />
+    <Compile Include="Items\Tier6\SolarRapier.cs" />
+    <Compile Include="Items\Tier6\StardustEpee.cs" />
+    <Compile Include="Items\Tier2\StingingEpee.cs" />
+    <Compile Include="Items\Tier6\VortexFoil.cs" />
+    <Compile Include="Items\Tier2\HellfireGreatbow.cs" />
+    <Compile Include="Items\Hemoplague.cs" />
+    <Compile Include="Items\Tier3\IchorGreatarrow.cs" />
+    <Compile Include="Items\Tier1\IronGreatarrow.cs" />
+    <Compile Include="Items\Tier4\LightcrystalGreatbow.cs" />
+    <Compile Include="Items\Mist.cs" />
+    <Compile Include="Items\Tier5\Monsoon.cs" />
+    <Compile Include="Items\Move.cs" />
+    <Compile Include="Items\MysteryToken.cs" />
+    <Compile Include="Items\PrimordialGreatbow.cs" />
+    <Compile Include="Items\RazorSeekers.cs" />
+    <Compile Include="Items\Return.cs" />
+    <Compile Include="Items\RitualDagger.cs" />
+    <Compile Include="Items\RockRing.cs" />
+    <Compile Include="Items\Tier5\SanguineGreatarrow.cs" />
+    <Compile Include="Items\Seekers.cs" />
+    <Compile Include="Items\Tier3\ShadowstrungGreatbow.cs" />
+    <Compile Include="Items\Tier5\TeravoltGreatbow.cs" />
+    <Compile Include="Items\Tier1\AmethystTicket.cs" />
+    <Compile Include="Items\Tier1\AmethystToken.cs" />
+    <Compile Include="Items\Tier1\IceShardRing.cs" />
+    <Compile Include="Items\Tier1\ManaBattery.cs" />
+    <Compile Include="Items\Tier1\ScourgeRing.cs" />
+    <Compile Include="Items\Tier1\Splitter.cs" />
+    <Compile Include="Items\Tier2\AcidRainRing.cs" />
+    <Compile Include="Items\Tier2\Azure.cs" />
+    <Compile Include="Items\Tier2\EmbellishedHood.cs" />
+    <Compile Include="Items\Tier2\EmbellishedRobe.cs" />
+    <Compile Include="Items\Tier2\EmbellishedShoes.cs" />
+    <Compile Include="Items\Tier2\Gunblade.cs" />
+    <Compile Include="Items\Tier2\ManaCapacitor.cs" />
+    <Compile Include="Items\Tier2\RazorwindRing.cs" />
+    <Compile Include="Items\Tier2\TopazTicket.cs" />
+    <Compile Include="Items\Tier2\TopazToken.cs" />
+    <Compile Include="Items\Tier3\DeathKnellRing.cs" />
+    <Compile Include="Items\Tier3\DeepScourgeRing.cs" />
+    <Compile Include="Items\Tier3\DragoonLance.cs" />
+    <Compile Include="Items\Tier3\EnhancedManaCapacitor.cs" />
+    <Compile Include="Items\Tier3\FireRainRing.cs" />
+    <Compile Include="Items\Tier3\GunbladeMkII.cs" />
+    <Compile Include="Items\Tier3\GunbladeSpread.cs" />
+    <Compile Include="Items\Tier3\HollowPoint.cs" />
+    <Compile Include="Items\Tier3\SapphireTicket.cs" />
+    <Compile Include="Items\Tier3\SapphireToken.cs" />
+    <Compile Include="Items\Tier3\SorcerorsCapacitor.cs" />
+    <Compile Include="Items\Tier4\ChargeBangle.cs" />
+    <Compile Include="Items\Tier4\EmeraldTicket.cs" />
+    <Compile Include="Items\Tier4\EmeraldToken.cs" />
+    <Compile Include="Items\Tier4\GunbladeBurst.cs" />
+    <Compile Include="Items\Tier4\GunbladeMkIII.cs" />
+    <Compile Include="Items\Tier4\GunbladeSpreadMkII.cs" />
+    <Compile Include="Items\Tier4\LightningRing.cs" />
+    <Compile Include="Items\Tier4\LightSpearRing.cs" />
+    <Compile Include="Items\Tier4\Shadowflame.cs" />
+    <Compile Include="Items\Tier4\ShadowflameRing.cs" />
+    <Compile Include="Items\Tier4\ShattershardRing.cs" />
+    <Compile Include="Items\Tier5\BansheeHowlRing.cs" />
+    <Compile Include="Items\Tier5\FireCrackerRing.cs" />
+    <Compile Include="Items\Tier5\GunbladeBurstMkII.cs" />
+    <Compile Include="Items\Tier5\GunbladeMkIV.cs" />
+    <Compile Include="Items\Tier5\GunbladeSpreadMkIII.cs" />
+    <Compile Include="Items\Tier5\PetalstormRing.cs" />
+    <Compile Include="Items\Tier5\PolarIce.cs" />
+    <Compile Include="Items\Tier5\RubyTicket.cs" />
+    <Compile Include="Items\Tier5\RubyToken.cs" />
+    <Compile Include="Items\Tier5\SoulWellRing.cs" />
+    <Compile Include="Items\Tier5\UndyingRing.cs" />
+    <Compile Include="Items\Tier6\AmberTicket.cs" />
+    <Compile Include="Items\Tier6\AmberToken.cs" />
+    <Compile Include="Items\Tier6\GunbladeBurstMkIII.cs" />
+    <Compile Include="Items\Tier6\GunbladeMkV.cs" />
+    <Compile Include="Items\Tier6\GunbladeSpreadMkIV.cs" />
+    <Compile Include="Items\Tier6\HolyLanceRing.cs" />
+    <Compile Include="Items\Tier6\MoonIdol.cs" />
+    <Compile Include="Items\Tier6\NebulaParasiteRing.cs" />
+    <Compile Include="Items\Tier6\PillarFragment.cs" />
+    <Compile Include="Items\Tier6\SolarShowerRing.cs" />
+    <Compile Include="Items\Tier6\VortexLightningRing.cs" />
+    <Compile Include="Items\Transfuse.cs" />
+    <Compile Include="Items\Turrets\BowTurret.cs" />
+    <Compile Include="Items\Turrets\GunTurret.cs" />
+    <Compile Include="Items\Turrets\RocketTurret.cs" />
+    <Compile Include="Items\Turrets\ShotgunTurret.cs" />
+    <Compile Include="Items\Tier4\VenomfangGreatarrow.cs" />
+    <Compile Include="Items\Tier2\VileGreatarrow.cs" />
+    <Compile Include="Items\Void\Oblivion.cs" />
+    <Compile Include="Items\Vortex.cs" />
+    <Compile Include="Items\Tier6\VortexGreatarrow.cs" />
+    <Compile Include="Items\Tier1\WoodGreatbow.cs" />
+    <Compile Include="Items\Tier5\WrathfulGreatarrow.cs" />
+    <Compile Include="MPlayer.cs" />
+    <Compile Include="NPCs\gNPC.cs" />
+    <Compile Include="Projectiles\AcidRain.cs" />
+    <Compile Include="Projectiles\AcidRainSpawner.cs" />
+    <Compile Include="Projectiles\Artillery\ArrowFlare.cs" />
+    <Compile Include="Projectiles\Artillery\FireArrowFlare.cs" />
+    <Compile Include="Projectiles\Artillery\GrenadeFlare.cs" />
+    <Compile Include="Projectiles\BigHolyLance.cs" />
+    <Compile Include="Projectiles\BloodMagic\BloodBullet.cs" />
+    <Compile Include="Projectiles\BloodMagic\BloodMist.cs" />
+    <Compile Include="Projectiles\BloodMagic\Bloodseeker.cs" />
+    <Compile Include="Projectiles\BloodMagic\BloodSword.cs" />
+    <Compile Include="Projectiles\BloodMagic\BloodWell.cs" />
+    <Compile Include="Projectiles\BloodMagic\RazorSeeker.cs" />
+    <Compile Include="Projectiles\Bullets\Azure.cs" />
+    <Compile Include="Projectiles\Bullets\Fragments\NebulaFrag.cs" />
+    <Compile Include="Projectiles\Bullets\Fragments\SolarFrag.cs" />
+    <Compile Include="Projectiles\Bullets\Fragments\StardustFrag.cs" />
+    <Compile Include="Projectiles\Bullets\Fragments\VortexFrag.cs" />
+    <Compile Include="Projectiles\Bullets\HollowPoint.cs" />
+    <Compile Include="Projectiles\Bullets\PillarFragment.cs" />
+    <Compile Include="Projectiles\Bullets\PolarIce.cs" />
+    <Compile Include="Projectiles\Bullets\Shadowflame.cs" />
+    <Compile Include="Projectiles\Bullets\Splitter.cs" />
+    <Compile Include="Projectiles\Duelist\AncientRapier.cs" />
+    <Compile Include="Projectiles\Duelist\BlazingEstoc.cs" />
+    <Compile Include="Projectiles\Duelist\BlessedRapier.cs" />
+    <Compile Include="Projectiles\Duelist\CursedFoil.cs" />
+    <Compile Include="Projectiles\Duelist\FencerFoil.cs" />
+    <Compile Include="Projectiles\Duelist\FrostbiteEpee.cs" />
+    <Compile Include="Projectiles\Duelist\MartianFoil.cs" />
+    <Compile Include="Projectiles\Duelist\NebulaEstoc.cs" />
+    <Compile Include="Projectiles\Duelist\ShadowflameEstoc.cs" />
+    <Compile Include="Projectiles\Duelist\SimpleRapier.cs" />
+    <Compile Include="Projectiles\Duelist\SolarRapier.cs" />
+    <Compile Include="Projectiles\Duelist\StardustEpee.cs" />
+    <Compile Include="Projectiles\Duelist\StingingEpee.cs" />
+    <Compile Include="Projectiles\Duelist\VortexFoil.cs" />
+    <Compile Include="Projectiles\Firecracker.cs" />
+    <Compile Include="Projectiles\FireRain.cs" />
+    <Compile Include="Projectiles\FireRainSpawner.cs" />
+    <Compile Include="Projectiles\gProj.cs" />
+    <Compile Include="Projectiles\Greatarrows\AzureGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\CrystalGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\CursedGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\DragonslayerGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\IchorGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\IronGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\SanguineGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\VenomfangGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\VileGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\VortexGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatarrows\WrathfulGreatarrow.cs" />
+    <Compile Include="Projectiles\Greatbows\AzureGreatbow.cs" />
+    <Compile Include="Projectiles\Greatbows\Greatbone.cs" />
+    <Compile Include="Projectiles\Greatbows\HellfireGreatbow.cs" />
+    <Compile Include="Projectiles\Greatbows\LightcrystalGreatbow.cs" />
+    <Compile Include="Projectiles\Greatbows\Monsoon.cs" />
+    <Compile Include="Projectiles\Greatbows\Orion.cs" />
+    <Compile Include="Projectiles\Greatbows\PrimordialGreatbow.cs" />
+    <Compile Include="Projectiles\Greatbows\ShadowstrungGreatbow.cs" />
+    <Compile Include="Projectiles\Greatbows\TeravoltGreatbow.cs" />
+    <Compile Include="Projectiles\Greatbows\WoodGreatbow.cs" />
+    <Compile Include="Projectiles\HolyLance.cs" />
+    <Compile Include="Projectiles\IceShard.cs" />
+    <Compile Include="Projectiles\IceShardSpawner.cs" />
+    <Compile Include="Projectiles\LightSpear.cs" />
+    <Compile Include="Projectiles\MartyrBomb.cs" />
+    <Compile Include="Projectiles\Minions\DyingStar.cs" />
+    <Compile Include="Projectiles\Minions\FireElementalSpirit.cs" />
+    <Compile Include="Projectiles\Minions\HoverAbove.cs" />
+    <Compile Include="Projectiles\Minions\HoverLOS.cs" />
+    <Compile Include="Projectiles\Minions\IceElementalSpirit.cs" />
+    <Compile Include="Projectiles\Minions\Minion.cs" />
+    <Compile Include="Projectiles\Minions\UnboundSoul.cs" />
+    <Compile Include="Projectiles\Minions\WaterElementalSpirit.cs" />
+    <Compile Include="Projectiles\NebulaParasite.cs" />
+    <Compile Include="Projectiles\NebulaPierce.cs" />
+    <Compile Include="Projectiles\Needles\AssassinNeedle.cs" />
+    <Compile Include="Projectiles\Needles\AzureNeedle.cs" />
+    <Compile Include="Projectiles\Needles\HellfireNeedle.cs" />
+    <Compile Include="Projectiles\Needles\IronNeedle.cs" />
+    <Compile Include="Projectiles\Needles\LodestarNeedle.cs" />
+    <Compile Include="Projectiles\Needles\TeravoltNeedle.cs" />
+    <Compile Include="Projectiles\OrionHunter.cs" />
+    <Compile Include="Projectiles\Petalstorm.cs" />
+    <Compile Include="Projectiles\Razorwind.cs" />
+    <Compile Include="Projectiles\Rock.cs" />
+    <Compile Include="Projectiles\Rock2.cs" />
+    <Compile Include="Projectiles\Rock3.cs" />
+    <Compile Include="Projectiles\ShadowflamePortal.cs" />
+    <Compile Include="Projectiles\Shattershard.cs" />
+    <Compile Include="Projectiles\ShattershardSpawner.cs" />
+    <Compile Include="Projectiles\SolarShower.cs" />
+    <Compile Include="Projectiles\SolarShowerSpawner.cs" />
+    <Compile Include="Projectiles\SoulProj.cs" />
+    <Compile Include="Projectiles\SoulWell1.cs" />
+    <Compile Include="Projectiles\Turrets\BasicTurret.cs" />
+    <Compile Include="Projectiles\Turrets\BowTurret.cs" />
+    <Compile Include="Projectiles\Turrets\BowTurretCapsule.cs" />
+    <Compile Include="Projectiles\Turrets\GunTurret.cs" />
+    <Compile Include="Projectiles\Turrets\GunTurretCapsule.cs" />
+    <Compile Include="Projectiles\Turrets\RocketTurret.cs" />
+    <Compile Include="Projectiles\Turrets\RocketTurretCapsule.cs" />
+    <Compile Include="Projectiles\Turrets\ShotgunTurret.cs" />
+    <Compile Include="Projectiles\Turrets\ShotgunTurretCapsule.cs" />
+    <Compile Include="Projectiles\Turrets\TurretStand.cs" />
+    <Compile Include="Projectiles\VoidHitbox.cs" />
+    <Compile Include="Projectiles\VoidSpawner.cs" />
+    <Compile Include="Projectiles\VoidTendril.cs" />
+    <Compile Include="Projectiles\Void\VoidBullet.cs" />
+    <Compile Include="Sounds\Bell.cs" />
+    <Compile Include="Sounds\Scream.cs" />
+    <Compile Include="Sounds\Thunder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="description.txt" />
+    <Content Include="build.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoaderServer.exe" -build "$(ProjectDir)\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

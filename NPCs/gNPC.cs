@@ -51,7 +51,7 @@ namespace EnemyMods.NPCs
         public override bool CloneNewInstances => true;
         public override void SetDefaults(NPC npc)
         {
-            if (Main.netMode == 1 || npc == null || npc.FullName == null)//if multiplayer, but not server. 1 is client in MP, 2 is server. Prefixes are sent to client by server in MP.
+            if (Main.rand == null || Main.netMode == 1 || npc == null || npc.FullName == null)//if multiplayer, but not server. 1 is client in MP, 2 is server. Prefixes are sent to client by server in MP.
             {
                 return;
             }

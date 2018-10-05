@@ -44,10 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\SteamApps\common\Terraria\Terraria.exe</HintPath>
-    </Reference>
-    <Reference Include="tmodloader">
-      <HintPath>..\..\..\..\..\..\Desktop\ModLoader\tmodloader.exe</HintPath>
+      <HintPath>..\..\..\Steam\SteamApps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +234,84 @@
     <Compile Include="Items\Tier5\WrathfulGreatarrow.cs" />
     <Compile Include="MPlayer.cs" />
     <Compile Include="NPCs\gNPC.cs" />
+    <Compile Include="NPCs\NPCUtils.cs" />
+    <Compile Include="Prefixes\Groups\RareGroup.cs" />
+    <Compile Include="Prefixes\Groups\TitleGroup.cs" />
+    <Compile Include="Prefixes\Groups\PostMoonlordGroup.cs" />
+    <Compile Include="Prefixes\Groups\ProjectilesGroup.cs" />
+    <Compile Include="Prefixes\Groups\SpecialGroup.cs" />
+    <Compile Include="Prefixes\Groups\DebuffGroup.cs" />
+    <Compile Include="Prefixes\Groups\StatsGroup.cs" />
+    <Compile Include="Prefixes\NPCPrefix.cs" />
+    <Compile Include="Prefixes\PostMoonlord\PsychicPrefix.cs" />
+    <Compile Include="Prefixes\PostMoonlord\LeechingPrefix.cs" />
+    <Compile Include="Prefixes\PostMoonlord\MaleficPrefix.cs" />
+    <Compile Include="Prefixes\PostMoonlord\AdaptivePrefix.cs" />
+    <Compile Include="Prefixes\PostMoonlord\ChannelerPrefix.cs" />
+    <Compile Include="Prefixes\PostMoonlord\MirroredPrefix.cs" />
+    <Compile Include="Prefixes\PrefixGroup.cs" />
+    <Compile Include="Prefixes\PrefixType.cs" />
+    <Compile Include="Prefixes\PrefixVault.cs" />
+    <Compile Include="Prefixes\Projectiles\ShadowmagePrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\LightningRodPrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\RuneMagePrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\PartyAnimalPrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\FlametrailPrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\BionicPrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\ShadowflamePrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\DuneMagePrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\BubblyPrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\HellwingPrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\SonorousPrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\GenerousPrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\PhilanthropicPrefix.cs" />
+    <Compile Include="Prefixes\Projectiles\VolcanicPrefix.cs" />
+    <Compile Include="Prefixes\Rare\RarePrefix.cs" />
+    <Compile Include="Prefixes\Special\ExecutionerPrefix.cs" />
+    <Compile Include="Prefixes\Special\RegeneratingPrefix.cs" />
+    <Compile Include="Prefixes\Special\PetrifyingPrefix.cs" />
+    <Compile Include="Prefixes\Special\MartyrPrefix.cs" />
+    <Compile Include="Prefixes\Special\MagebanePrefix.cs" />
+    <Compile Include="Prefixes\Special\MutilatorPrefix.cs" />
+    <Compile Include="Prefixes\Special\ForcefulPrefix.cs" />
+    <Compile Include="Prefixes\Special\LaunchingPrefix.cs" />
+    <Compile Include="Prefixes\Special\HaltingPrefix.cs" />
+    <Compile Include="Prefixes\Special\CutpursePrefix.cs" />
+    <Compile Include="Prefixes\Special\WingClipperPrefix.cs" />
+    <Compile Include="Prefixes\Special\SplitterPrefix.cs" />
+    <Compile Include="Prefixes\Special\StealthyPrefix.cs" />
+    <Compile Include="Prefixes\Special\VengefulPrefix.cs" />
+    <Compile Include="Prefixes\Special\VoodooPrefix.cs" />
+    <Compile Include="Prefixes\Special\VampiricPrefix.cs" />
+    <Compile Include="Prefixes\Special\SlowingPrefix.cs" />
+    <Compile Include="Prefixes\Special\VenomousPrefix.cs" />
+    <Compile Include="Prefixes\Special\HexingPrefix.cs" />
+    <Compile Include="Prefixes\Special\TricksterPrefix.cs" />
+    <Compile Include="Prefixes\Special\DarkPrefix.cs" />
+    <Compile Include="Prefixes\Special\ElectrifiedPrefix.cs" />
+    <Compile Include="Prefixes\Special\FrozenPrefix.cs" />
+    <Compile Include="Prefixes\Special\BreakerPrefix.cs" />
+    <Compile Include="Prefixes\Special\HellfirePrefix.cs" />
+    <Compile Include="Prefixes\Special\BurningPrefix.cs" />
+    <Compile Include="Prefixes\Stats\MiniaturePrefix.cs" />
+    <Compile Include="Prefixes\Stats\ColossalPrefix.cs" />
+    <Compile Include="Prefixes\Stats\EnduringPrefix.cs" />
+    <Compile Include="Prefixes\Stats\PersistentPrefix.cs" />
+    <Compile Include="Prefixes\Stats\BigPrefix.cs" />
+    <Compile Include="Prefixes\Stats\SmallPrefix.cs" />
+    <Compile Include="Prefixes\Stats\ArmoredPrefix.cs" />
+    <Compile Include="Prefixes\Stats\DangerousPrefix.cs" />
+    <Compile Include="Prefixes\Stats\ToughPrefix.cs" />
+    <Compile Include="Prefixes\Debuff\FlammablePrefix.cs" />
+    <Compile Include="Prefixes\Debuff\CryophobicPrefix.cs" />
+    <Compile Include="Prefixes\Debuff\ToxiphobicPrefix.cs" />
+    <Compile Include="Prefixes\Titles\MasterNinjaTitle.cs" />
+    <Compile Include="Prefixes\Titles\NecromancerTitle.cs" />
+    <Compile Include="Prefixes\Titles\NullifierTitle.cs" />
+    <Compile Include="Prefixes\Titles\ImmortalTitle.cs" />
+    <Compile Include="Prefixes\Titles\LightningGodTitle.cs" />
+    <Compile Include="Prefixes\Titles\ReaperTitle.cs" />
+    <Compile Include="Prefixes\Titles\JuggernautTitle.cs" />
     <Compile Include="Projectiles\AcidRain.cs" />
     <Compile Include="Projectiles\AcidRainSpawner.cs" />
     <Compile Include="Projectiles\Artillery\ArrowFlare.cs" />
@@ -354,10 +429,13 @@
     <Content Include="description.txt" />
     <Content Include="build.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Prefixes\Debuff\PyophobicPrefix.cs" />
+  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoaderServer.exe" -build "$(ProjectDir)\"</PostBuildEvent>
+    <PostBuildEvent>"D:\Steam\steamapps\common\Terraria\tModLoaderServer.exe" -build "$(ProjectDir)\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

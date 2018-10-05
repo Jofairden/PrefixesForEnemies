@@ -1,4 +1,5 @@
 ﻿using EnemyMods.NPCs;
+using EnemyMods.Prefixes;
 using System.IO;
 using Terraria;
 using Terraria.ModLoader;
@@ -7,6 +8,8 @@ namespace EnemyMods
 {
     public class EnemyMods : Mod
     {
+        internal static EnemyMods Instance;
+
         public EnemyMods()
         {
             Properties = new ModProperties()
@@ -15,6 +18,21 @@ namespace EnemyMods
                 AutoloadGores = true,
                 AutoloadSounds = true
             };
+        }
+
+        public override void Load()
+        {
+            Instance = this;
+
+            PrefixVault.Initialize();
+
+            PrefixVault.RegisterMod(this);
+            PrefixVault.SetupMod(this);
+        }
+
+        public override void Unload()
+        {
+            PrefixVault.Unload();
         }
         public override void HandlePacket(BinaryReader reader, int whoAmI)
         {

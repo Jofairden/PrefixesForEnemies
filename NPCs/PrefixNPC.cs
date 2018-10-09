@@ -37,7 +37,7 @@ namespace EnemyMods.NPCs
 
         public override void SetDefaults(NPC npc)
         {
-            if (Main.gameMenu || !npc.active || npc.whoAmI <= 0)
+            if (Main.gameMenu || !npc.active)
             {//BECAUSE FUCK THORIUM
                 return;
             }
@@ -127,6 +127,8 @@ namespace EnemyMods.NPCs
 
         public void OverrideName(NPC npc)
         {
+            if (npc.whoAmI <= 0) return;
+
             string baseName = npc.GetFullNetName().ToString();
 
             string prefixName = NewPrefixes.Where(pf => pf.IsPrefix())
@@ -313,6 +315,7 @@ namespace EnemyMods.NPCs
 
         public override void AI(NPC npc)
         {
+            base.AI(npc);
             if ((npc.type >= 547 && npc.type <= 578))
             {
                 return;
@@ -396,7 +399,6 @@ namespace EnemyMods.NPCs
                     netMessage.Send();
                 }
                 MPSynced = true;
-                return true;
             }
             if (!nameConfirmed && (Main.netMode != 1 || readyForChecks))//block to ensure all enemies retain prefixes in their displayNames
             {
@@ -413,11 +415,6 @@ namespace EnemyMods.NPCs
             //    return false;
             //}
             return base.PreAI(npc);
-        }
-
-        public override void PostAI(NPC npc)
-        {
-            base.PostAI(npc);
         }
 
         public override bool PreDraw(NPC npc, SpriteBatch spriteBatch, Color drawColor)

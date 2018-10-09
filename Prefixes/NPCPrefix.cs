@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.IO;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -65,5 +66,7 @@ namespace EnemyMods.Prefixes
             modPacket.Write(this.Type);
             modPacket.Write(this.Name);
         }
+
+        public virtual void ReadValues(BinaryReader reader) { }
     }
 }

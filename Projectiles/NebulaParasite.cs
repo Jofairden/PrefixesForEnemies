@@ -147,7 +147,7 @@ namespace EnemyMods.Projectiles
         }
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            gNPC info = target.GetGlobalNPC<gNPC>();
+            PrefixNPC info = target.GetGlobalNPC<PrefixNPC>();
             if(target.life <= 0)
             {
                 projectile.penetrate++;

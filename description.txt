@@ -4,3 +4,10 @@ See the mod homepage for a much more detailed description of content and a chang
 New and interesting loot has been added - kill enemies with the "Rare" prefix to obtain it.
 
 1.2.2 adds 6 variants of Needles, a new type of throwing weapon, craftable with tickets of each tier.
+
+
+
+2.0.0 --------------------
+- refactored all the prefixes in seperated classes
+- added dedicated prefix groups
+- added support for custom prefix groups and prefixes to be added by other mods

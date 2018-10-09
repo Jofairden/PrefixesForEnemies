@@ -42,4 +42,3 @@ namespace EnemyMods.Prefixes.Stats
         }
     }
 }
-}

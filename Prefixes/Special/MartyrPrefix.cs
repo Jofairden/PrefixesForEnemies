@@ -19,7 +19,7 @@ namespace EnemyMods.Prefixes.Stats
 
         public override void NPCLoot(NPC npc)
         {
-            int p = Projectile.NewProjectile(npc.Center.X, npc.Center.Y, 0, 0, mod.ProjectileType("MartyrBomb"), (int)(npc.damage * 1.5), 10);
+            int p = Projectile.NewProjectile(npc.Center.X, npc.Center.Y, 0, 0, EnemyMods.Instance.ProjectileType("MartyrBomb"), (int)(npc.damage * 1.5), 10);
         }
     }
 }

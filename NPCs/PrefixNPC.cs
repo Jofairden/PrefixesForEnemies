@@ -37,7 +37,7 @@ namespace EnemyMods.NPCs
 
         public override void SetDefaults(NPC npc)
         {
-            if (Main.gameMenu || !npc.active)
+            if (Main.gameMenu || !npc.active || npc.whoAmI <= 0)
             {//BECAUSE FUCK THORIUM
                 return;
             }
@@ -127,21 +127,17 @@ namespace EnemyMods.NPCs
 
         public void OverrideName(NPC npc)
         {
-            string prefixName = "";
-            string suffixName = "";
-            foreach (string p in NewPrefixes.Where(pf => pf.IsPrefix()).Select(pf => pf.Name))
-            {
-                prefixName += p + " ";
-            }
-            foreach (string p in NewPrefixes.Where(pf => !pf.IsPrefix()).Select(pf => pf.Name))
-            {
-                suffixName += " " + p;
-            }
-            if (prefixName.Length > 0)
-            {
-                suffixName = suffixName.Replace(" the", "");
-            }
-            npc.GivenName = prefixName + npc.FullName + suffixName;
+            string baseName = npc.GetFullNetName().ToString();
+
+            string prefixName = NewPrefixes.Where(pf => pf.IsPrefix())
+               .Select(pf => pf.Name)
+               .Aggregate("", (current, next) => current + $"{next} ");
+
+            string suffixName = NewPrefixes.Where(pf => !pf.IsPrefix())
+                .Select(pf => pf.Name)
+                .Aggregate("", (current, next) => current + $" {next}");
+
+            npc.GivenName = $"{prefixName}{baseName}{suffixName}";
         }
 
         public override void DrawEffects(NPC npc, ref Color drawColor)

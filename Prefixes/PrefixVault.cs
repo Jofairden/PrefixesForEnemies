@@ -111,7 +111,8 @@ namespace EnemyMods.Prefixes
 
         internal static List<NPCPrefix> GetPrefixes(uint groupID)
         {
-            if (prefixes.TryGetValue(groupID, out List<NPCPrefix> prefixList))
+            List<NPCPrefix> prefixList = null;
+            if (prefixes.TryGetValue(groupID, out prefixList))
             {
                 return prefixList;
             }

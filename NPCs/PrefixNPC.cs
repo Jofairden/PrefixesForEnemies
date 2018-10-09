@@ -16,7 +16,7 @@ namespace EnemyMods.NPCs
 {
     public class PrefixNPC : GlobalNPC
     {
-   
+
         public bool nameConfirmed = false;
         public bool MPSynced = false;
         public bool readyForChecks = false;
@@ -33,10 +33,14 @@ namespace EnemyMods.NPCs
         public override bool InstancePerEntity => true;
         public override bool CloneNewInstances => true;
 
-        public NPCPrefix[] NewPrefixes { get; internal set; }
+        public NPCPrefix[] NewPrefixes { get; internal set; } = Enumerable.Empty<NPCPrefix>().ToArray();
 
         public override void SetDefaults(NPC npc)
         {
+            if (Main.gameMenu || !npc.active)
+            {//BECAUSE FUCK THORIUM
+                return;
+            }
             if (Main.netMode == 1 || npc == null || npc.FullName == null)//if multiplayer, but not server. 1 is client in MP, 2 is server. Prefixes are sent to client by server in MP.
             {
                 return;
@@ -48,11 +52,11 @@ namespace EnemyMods.NPCs
             }
 
             //default npc
-            if (!(npc.aiStyle == 0 && npc.value == 0 && npc.npcSlots == 1))
+            if (npc.aiStyle == 0 && npc.value == 0 && npc.npcSlots == 1)
             {
                 return;
             }
-
+            //TODO: double check the types of allowances
             //no prefixes for friendlies and critters
             if (npc.aiStyle == AI_FRIENDLY || npc.catchItem > 0 || npc.lifeMax <= 1)
             {
@@ -133,12 +137,11 @@ namespace EnemyMods.NPCs
             {
                 suffixName += " " + p;
             }
-            npc.GivenName = prefixName + npc.FullName + suffixName;
-
-            if (NewPrefixes.Length > 1)
+            if (prefixName.Length > 0)
             {
-                npc.GivenName = npc.GivenName.Replace("  the", "");
+                suffixName = suffixName.Replace(" the", "");
             }
+            npc.GivenName = prefixName + npc.FullName + suffixName;
         }
 
         public override void DrawEffects(NPC npc, ref Color drawColor)
@@ -233,7 +236,7 @@ namespace EnemyMods.NPCs
         }
         public override void NPCLoot(NPC npc)
         {
-
+            base.NPCLoot(npc);
             //if (parasiteTimeLeft > 0)
             //{
             //    NPC target = getClosestNPC(npc);
@@ -423,6 +426,7 @@ namespace EnemyMods.NPCs
 
         public override bool PreDraw(NPC npc, SpriteBatch spriteBatch, Color drawColor)
         {
+
             //set shaderID based on prefix here
             //if (prefixes.Contains("Void-Touched"))
             //{
@@ -448,7 +452,7 @@ namespace EnemyMods.NPCs
 
                 GraphicsUtils.ResetBatch(spriteBatch);
             }
-            return true;
+            return base.PreDraw(npc, spriteBatch, drawColor);
         }
 
         private NPC getClosestNPC(NPC projectile)

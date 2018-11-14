@@ -1,5 +1,5 @@
 author = Hiccup251
-version = 1.2.3
+version = 2.0.0
 displayName = Prefixes For Enemies
 homepage = http://forums.terraria.org/index.php?threads/prefixes-for-enemies.40620/
 hideCode = false

@@ -42,7 +42,7 @@ namespace EnemyMods.Projectiles.Void
             {
                 target = Main.npc[target.realLife];
             }
-            gNPC info = target.GetGlobalNPC<gNPC>();
+            PrefixNPC info = target.GetGlobalNPC<PrefixNPC>();
             info.voidBurn += damage;
         }
     }
